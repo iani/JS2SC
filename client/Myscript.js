@@ -1,4 +1,4 @@
- var socket = io.connect('https://uxjwidpuej.localtunnel.me/');
+var socket = io.connect('localhost:3000');
 
 
 function Myfunction() {

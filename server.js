@@ -23,9 +23,20 @@ function newConnection(socket) {
     console.log('New Connection:', socket.id);
     socket.on('test', testmsg);
     function testmsg(test) {
-    var values = test;
-    console.log(test);
-        
+        var values = test;
+        var msg;
+        console.log(test);
+        console.log(test[0]);
+        msg = {
+            address: "/hello/from/oscjs",
+            args: [
+                {
+                    type: "f",
+                    value: 1.1
+                }
+            ]         
+        };
+        udpPort.send(msg);
     }
 }
 // Send to SuperCollider 
@@ -69,8 +80,6 @@ setInterval(function() {
 app.get('/', function(req, res){
     res.render('index.ejs');
 });
-
-
 
 app.get('/api/:sound/:value', changes);
 function changes(request, responce) {
