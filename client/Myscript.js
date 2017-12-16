@@ -1,4 +1,4 @@
-var socket = io.connect('https://js2sctest1.herokuapp.com/:3000');
+var socket = io.connect('https://js2sctest1.herokuapp.com:3000');
 
 function Myfunction() {
     var PitchGranular = document.getElementById("PitchGranular").value
