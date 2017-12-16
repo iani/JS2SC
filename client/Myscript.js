@@ -1,5 +1,4 @@
-var socket = io.connect('localhost:3000');
-
+var socket = io.connect('https://js2sctest1.herokuapp.com/:3000');
 
 function Myfunction() {
     var PitchGranular = document.getElementById("PitchGranular").value
@@ -22,7 +21,7 @@ socket.on('connect', function(data) {
 }) */
 
 /* document.getElementById("VolumeGranular").addEventListener("oninput", function(){
-    
+
 }) */
 /* socket.emit('test', document.getElementById("VolumeGranular").value); */
 
